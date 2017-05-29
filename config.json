@@ -1,0 +1,20 @@
+{
+  "jwt": {
+    "secretKey": "my_secret",
+    "expires": 800000
+  },
+  "db": {
+    "dialect":"mysql",
+    "host": "127.0.0.1",
+    "name": "dns",
+    "user": "root",
+    "password": "root"
+  },
+  "pg": {
+    "dialect": "postgres",
+    "host": "ec2-54-235-72-121.compute-1.amazonaws.com",
+    "name": "d1r2sjdh26dq8e",
+    "user": "lzzwqmuivsrlto",
+    "password": "0257b01550ff6a1a20e720d44080e41dfe1f6019aa2d8e02d5de65b51b2e1e0d"
+  }
+}
