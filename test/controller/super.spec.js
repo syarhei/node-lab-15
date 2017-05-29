@@ -17,7 +17,7 @@ function input(user, pass) {
         .expect(200);
 }
 
-let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2VyZyIsImlhdCI6MTQ5NDkxNTcxMywiZXhwIjoxNDk1NzE1NzEzfQ.rGIB58VbWT4EBTs9tKBeal6OTdSAOwWF5qfZMQjU7Yw';
+let token = 'token';
 
 function getDomains() {
     return app_test.get('/api/users/domains')
