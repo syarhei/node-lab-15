@@ -21,11 +21,16 @@ let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2VyZyIsImlhdCI6MT
 
 function getDomains() {
     return app_test.get('/api/users/domains')
-        .set('Cookie', 'token='+token)
+        .set('Cookie', token)
         .expect(200);
 }
 
-describe('users', () => {
+describe('test app', () => {
+    beforeAll(async () => {
+        let user = await input('serg', '111');
+        token = user.headers['set-cookie'][0];
+        console.log(token);
+    });
     it('success sign in', async () => {
         let domains = await input("serg", "111");
         let text = JSON.parse(domains.text);
@@ -38,9 +43,6 @@ describe('users', () => {
         //console.log(text);
         expect(text.error).toBeDefined();
     });
-});
-
-describe('domains', () => {
     it('get', async () => {
         let domains = await getDomains();
         let text = JSON.parse(domains.text);
