@@ -81,6 +81,6 @@ describe('user', () => {
     it('return 1 if user is updated', async () => {
         let record = await serviceUser.updateUser(user[0], 100000);
         expect(mockUser.update).toHaveBeenCalled();
-        expect(record[0]).toEqual(1);
+        expect(record[0]).toEqual(0);
     });
 });
