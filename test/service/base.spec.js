@@ -51,40 +51,6 @@ describe('domain', () => {
         expect(mockDomain.destroy).toHaveBeenCalled();
         expect(record).toEqual(1);
     });
-/*
-
-    it(`Should returned error,
-        if record not found`, async () => {
-        expect.assertions(2);
-
-        try {
-            await await service.read(9000);
-        } catch (error) {
-
-            expect(repository.findById)
-                .toHaveBeenCalled();
-
-            expect(error).toEqual(errors.notFound);
-
-        }
-    });
-
-    it(`Should returned error,
-        if id not Int`, async () => {
-        expect.assertions(2);
-
-        try {
-            await await service.read('surprise!');
-        } catch (error) {
-
-            expect(repository.findById)
-                .not.toHaveBeenCalled();
-
-            expect(error).toEqual(errors.invalidId);
-
-        }
-    });
-    */
 });
 
 let user = [
