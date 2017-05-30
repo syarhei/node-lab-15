@@ -44,7 +44,7 @@ describe('domain', () => {
     it('return created domain', async () => {
         let record = await serviceDomain.addDomain("sergei" , { name: "serg15.murkou.ru", cost: 200});
         expect(mockDomain.create).toHaveBeenCalled();
-        expect(record).toEqual(domain[1]);
+        expect(record).toEqual(domain[0]);
     });
     it('return 1 if domain is deleted', async () => {
         let record = await serviceDomain.deleteDomain("sergei", "serg15.murkou.ru");
